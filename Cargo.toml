@@ -2,5 +2,20 @@
 name = "password_generator"
 version = "0.1.0"
 edition = "2021"
+authors = ["Beratcan"]
+description = "A secure password generator with encryption and clipboard functionality"
 
 [dependencies]
+rand = "0.8.5"           # For random number generation
+rand_core = "0.6.4"      # Core random number functionality
+aes-gcm = "0.10.3"      # For AES-GCM encryption
+argon2 = "0.5.3"        # For key derivation from master password
+base64 = "0.21.7"       # For encoding/decoding encrypted data
+serde = { version = "1.0", features = ["derive"] } # For serialization
+serde_json = "1.0"      # For JSON serialization
+clap = { version = "4.5", features = ["derive"] } # For CLI argument parsing
+rpassword = "7.3"       # For secure password input
+cli-clipboard = "0.4.0" # For clipboard operations
+anyhow = "1.0"         # For error handling
+thiserror = "1.0"      # For custom error types
+chrono = { version = "0.4", features = ["serde"] } # For timestamp handling
