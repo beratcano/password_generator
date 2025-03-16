@@ -43,7 +43,7 @@ enum Commands {
         special: bool,
 
         /// Save the generated password with a label
-        #[arg(short, long)]
+        #[arg(short = 'S', long)]
         save: bool,
 
         /// Label for the saved password
